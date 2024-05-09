@@ -70,8 +70,9 @@ util/WaveTableLoader \
 ######################################
 # building variables
 ######################################
-DEBUG = 1
-OPT = -O0
+#DEBUG = 1
+#OPT = -O0
+OPT = -O3
 
 #######################################
 # paths
@@ -316,7 +317,7 @@ CFLAGS = $(MCU) $(C_INCLUDES) $(C_DEFS) -ggdb $(WARNINGS) $(OPT) -fasm -fdata-se
 
 ifeq ($(DEBUG), 1)
 CFLAGS += -g -ggdb
-OPT = -O0
+OPT = -O3
 C_DEFS += -DDEBUG=1
 else
 C_DEFS += -DNDEBUG=1 -DRELEASE=1
